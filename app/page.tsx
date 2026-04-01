@@ -104,17 +104,6 @@ const featuredProjects = [
     logo: "Z",
     newTab: true,
   },
-  {
-    name: "JaverTech",
-    eyebrow: "LIVE BUSINESS SITE",
-    titleLines: ["JAVER", "TECH"],
-    description:
-      "A service-focused business site built to show pricing clearly, look sharp on mobile, and turn visitors into real inquiries.",
-    ctaLabel: "Start a Similar Project",
-    href: contactMailtoUrl,
-    logo: "J",
-    newTab: false,
-  },
 ];
 
 export default function Home() {

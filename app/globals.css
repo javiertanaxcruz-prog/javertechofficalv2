@@ -1011,6 +1011,17 @@ body.mobile-menu-open {
     padding: 40px 20px;
   }
 
+  #portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+  }
+
+  #portfolio .section__intro {
+    margin-bottom: 0;
+  }
+
   .services-grid,
   .advantages-grid {
     grid-template-columns: 1fr;
@@ -1019,11 +1030,11 @@ body.mobile-menu-open {
   .featured-work-rail {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(calc(100vw - 96px), 1fr);
-    gap: 16px;
+    grid-auto-columns: minmax(82vw, 82vw);
+    gap: 14px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-bottom: 6px;
+    padding: 4px 2px 8px;
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: contain;
     scrollbar-width: none;
@@ -1047,6 +1058,10 @@ body.mobile-menu-open {
 
   .card {
     min-height: 0;
+  }
+
+  .featured-work-card {
+    min-height: 340px;
   }
 
   .statement__actions,
@@ -1078,6 +1093,20 @@ body.mobile-menu-open {
     right: 12px;
     bottom: -6px;
     font-size: clamp(7rem, 34vw, 10rem);
+  }
+
+  .featured-work-card .feature-panel__copy {
+    padding-right: 44px;
+  }
+
+  .featured-work-card .feature-panel__title-line {
+    font-size: clamp(2.6rem, 14vw, 4rem);
+  }
+
+  .featured-work-card .feature-panel__logo {
+    right: 14px;
+    bottom: 0;
+    font-size: clamp(6rem, 28vw, 8rem);
   }
 
   .pricing-card p,
