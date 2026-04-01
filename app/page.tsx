@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { HorizontalRail } from "./components/horizontal-rail";
 import { MobileMenu } from "./components/mobile-menu";
 
 const navItems = [
@@ -235,7 +236,7 @@ export default function Home() {
 
       <div className="mobile-home">
         <section className="mobile-main-row" aria-label="Main site cards">
-          <div className="mobile-main-rail">
+          <HorizontalRail ariaLabel="Main site cards" className="mobile-main-rail">
             {mobileMainCards.map((card) => (
               <article key={card.id} id={card.id} className="mobile-main-card">
                 <div>
@@ -259,7 +260,7 @@ export default function Home() {
                 </a>
               </article>
             ))}
-          </div>
+          </HorizontalRail>
         </section>
 
         <section className="mobile-work-spot" id="mobile-portfolio">
@@ -269,7 +270,10 @@ export default function Home() {
             <p>Projects get their own row so people can move through your creations seamlessly.</p>
           </div>
 
-          <div className="featured-work-rail" aria-label="Featured projects">
+          <HorizontalRail
+            ariaLabel="Featured projects"
+            className="mobile-featured-work-rail"
+          >
             {featuredProjects.map((project) => (
               <article
                 key={project.name}
@@ -299,7 +303,7 @@ export default function Home() {
                 </div>
               </article>
             ))}
-          </div>
+          </HorizontalRail>
         </section>
 
         <section className="mobile-contact-card" id="mobile-contact">
