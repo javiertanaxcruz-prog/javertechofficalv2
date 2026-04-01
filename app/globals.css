@@ -650,10 +650,15 @@ body.mobile-menu-open {
   color: var(--pro-muted);
 }
 
-.featured-work-grid {
+.featured-work-rail {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
+}
+
+.featured-work-card {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .feature-panel--project {
@@ -1007,9 +1012,27 @@ body.mobile-menu-open {
   }
 
   .services-grid,
-  .advantages-grid,
-  .featured-work-grid {
+  .advantages-grid {
     grid-template-columns: 1fr;
+  }
+
+  .featured-work-rail {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(calc(100vw - 96px), 1fr);
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+
+  .featured-work-rail::-webkit-scrollbar {
+    display: none;
   }
 
   .card,

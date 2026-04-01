@@ -102,6 +102,18 @@ const featuredProjects = [
     ctaLabel: "Join the Waitlist",
     href: genZWaitlistHref,
     logo: "Z",
+    newTab: true,
+  },
+  {
+    name: "JaverTech",
+    eyebrow: "LIVE BUSINESS SITE",
+    titleLines: ["JAVER", "TECH"],
+    description:
+      "A service-focused business site built to show pricing clearly, look sharp on mobile, and turn visitors into real inquiries.",
+    ctaLabel: "Start a Similar Project",
+    href: contactMailtoUrl,
+    logo: "J",
+    newTab: false,
   },
 ];
 
@@ -192,9 +204,12 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="featured-work-grid">
+        <div className="featured-work-rail" aria-label="Featured projects">
           {featuredProjects.map((project) => (
-            <article key={project.name} className="feature-panel feature-panel--project">
+            <article
+              key={project.name}
+              className="feature-panel feature-panel--project featured-work-card"
+            >
               <div className="feature-panel__logo" aria-hidden="true">
                 {project.logo}
               </div>
@@ -211,8 +226,8 @@ export default function Home() {
                 <a
                   className="button button--light"
                   href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={project.newTab ? "_blank" : undefined}
+                  rel={project.newTab ? "noopener noreferrer" : undefined}
                 >
                   {project.ctaLabel}
                 </a>
