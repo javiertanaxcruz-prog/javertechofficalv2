@@ -114,24 +114,35 @@ const featuredProjects = [
   },
 ];
 
-const mobileShowcaseCards = [
+const mobileMainCards = [
   {
-    id: "mobile-services",
-    eyebrow: "SERVICES",
-    title: "Websites, landing pages, and AI tools that look sharp.",
+    id: "mobile-home",
+    eyebrow: "JAVERTECH",
+    title: "Built to Look Sharp. Built to Move Fast.",
     description:
-      "Swipe through the core pages of JaverTech in one row, with clear offers and faster paths into a real project.",
-    bullets: ["Custom Websites", "Landing Pages", "AI Chatbots"],
+      "Modern websites, landing pages, and AI tools starting at $99 for businesses that want to look more legit online.",
+    bullets: ["Modern websites", "Landing pages", "AI tools"],
     ctaLabel: "Start at $99",
     href: contactMailtoUrl,
     variant: "dark",
   },
   {
+    id: "mobile-services",
+    eyebrow: "SERVICES",
+    title: "Services built to bring in more business.",
+    description:
+      "Clean digital products made to build trust fast and turn more visitors into messages, calls, and real leads.",
+    bullets: ["Custom Websites", "AI Chatbots", "Landing Pages"],
+    ctaLabel: "Start a Project",
+    href: contactMailtoUrl,
+    variant: "outline",
+  },
+  {
     id: "mobile-approach",
     eyebrow: "APPROACH",
-    title: "Fast turnaround. Clear communication. Design with purpose.",
+    title: "Fast turnaround. Clear communication. Clean execution.",
     description:
-      "The goal is simple: make your business look more legit online and turn more visitors into messages, calls, and leads.",
+      "Everything is built to look sharp, move quickly, and make the process easy to follow from the first message to launch day.",
     bullets: ["Fast Turnaround", "Clear Communication", "Design With Purpose"],
     ctaLabel: "Talk With JaverTech",
     href: contactMailtoUrl,
@@ -142,7 +153,7 @@ const mobileShowcaseCards = [
     eyebrow: "PRICING",
     title: "Professional websites starting at $99.",
     description:
-      "Smaller projects start at $99, giving businesses a lower-cost way to launch something modern without big-agency pricing.",
+      "Smaller projects start at $99, giving businesses a lower-cost way to launch something strong without big-agency pricing.",
     bullets: ["Starting at $99", "Scope-based pricing", "Built for conversions"],
     ctaLabel: "Start Your Project",
     href: contactMailtoUrl,
@@ -151,9 +162,9 @@ const mobileShowcaseCards = [
   {
     id: "mobile-faq",
     eyebrow: "FAQ",
-    title: "The biggest questions, answered fast.",
+    title: "The fast answers people want before reaching out.",
     description:
-      "Most standard websites take one to two weeks, and ongoing support is available when you need updates or refinements.",
+      "Most standard sites take one to two weeks, and support is available when you need updates, refinements, or new pages.",
     bullets: ["How much does it cost?", "How long does it take?", "What do I need to start?"],
     ctaLabel: "Email JaverTech",
     href: contactMailtoUrl,
@@ -223,24 +234,15 @@ export default function Home() {
       </section>
 
       <div className="mobile-home">
-        <section className="mobile-row mobile-row--main" aria-labelledby="mobile-main-title">
-          <div className="mobile-row__intro">
-            <span className="section__eyebrow">MAIN PAGES</span>
-            <h2 id="mobile-main-title">Swipe Through the Main Site.</h2>
-            <p>
-              Scroll down for rows, then swipe across each row the way Apple handles cards on
-              mobile.
-            </p>
-          </div>
-
-          <div className="mobile-row__rail" aria-label="Main site cards">
-            {mobileShowcaseCards.map((card) => (
-              <article key={card.id} id={card.id} className="mobile-showcase-card">
-                <div className="mobile-showcase-card__body">
-                  <span className="mobile-showcase-card__eyebrow">{card.eyebrow}</span>
-                  <h3>{card.title}</h3>
+        <section className="mobile-main-row" aria-label="Main site cards">
+          <div className="mobile-main-rail">
+            {mobileMainCards.map((card) => (
+              <article key={card.id} id={card.id} className="mobile-main-card">
+                <div>
+                  <span className="mobile-main-card__eyebrow">{card.eyebrow}</span>
+                  <h2>{card.title}</h2>
                   <p>{card.description}</p>
-                  <ul className="mobile-showcase-card__list">
+                  <ul className="mobile-main-card__list">
                     {card.bullets.map((bullet) => (
                       <li key={bullet}>{bullet}</li>
                     ))}
@@ -260,14 +262,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mobile-row mobile-row--work" id="mobile-portfolio">
-          <div className="mobile-row__intro">
+        <section className="mobile-work-spot" id="mobile-portfolio">
+          <div className="mobile-work-spot__intro">
             <span className="section__eyebrow">FEATURED WORK</span>
-            <h2>Swipe Through the Projects.</h2>
-            <p>
-              Keep the work in its own row so people can move through your portfolio without
-              losing the rest of the site.
-            </p>
+            <h2>Swipe Through the Work.</h2>
+            <p>Projects get their own row so people can move through your creations seamlessly.</p>
           </div>
 
           <div className="featured-work-rail" aria-label="Featured projects">
@@ -300,6 +299,31 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="mobile-contact-card" id="mobile-contact">
+          <div className="mobile-contact-card__brand">
+            <span className="brand-logo brand-logo--footer">
+              <Image
+                className="brand-logo__mark"
+                src="/javertech-mark.png"
+                alt=""
+                width="96"
+                height="96"
+                sizes="60px"
+              />
+              <span className="brand-logo__text">
+                <span className="brand-logo__name">JaverTech</span>
+                <span className="brand-logo__tag">DIGITAL PRODUCTS</span>
+              </span>
+            </span>
+          </div>
+          <h2>Built to Look Sharp. Built to Move Fast.</h2>
+          <div className="mobile-contact-card__owner">
+            <span className="mobile-contact-card__label">CONTACT OWNER</span>
+            <a href={contactPhoneHref}>{contactPhoneDisplay}</a>
+            <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
         </section>
       </div>
