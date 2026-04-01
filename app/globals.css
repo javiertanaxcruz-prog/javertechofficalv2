@@ -282,13 +282,13 @@ a {
   letter-spacing: 0.28em;
 }
 
-.mobile-menu--open .mobile-menu__backdrop,
-.mobile-menu--open .mobile-menu__screen {
+body.mobile-menu-open .mobile-menu__backdrop,
+body.mobile-menu-open .mobile-menu__screen {
   opacity: 1;
   pointer-events: auto;
 }
 
-.mobile-menu--open .mobile-menu__panel {
+body.mobile-menu-open .mobile-menu__panel {
   transform: translateY(0) scale(1);
 }
 
