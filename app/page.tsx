@@ -10,6 +10,14 @@ const navItems = [
   { label: "FAQ", href: "#faq" },
 ];
 
+const mobileNavItems = [
+  { label: "Services", href: "#mobile-services" },
+  { label: "Work", href: "#mobile-portfolio" },
+  { label: "Approach", href: "#mobile-approach" },
+  { label: "Pricing", href: "#mobile-pricing" },
+  { label: "FAQ", href: "#mobile-faq" },
+];
+
 const genZWaitlistHref = "/go/gen-z";
 const contactEmail = "javiertanaxcruz@gmail.com";
 const contactPhoneDisplay = "317-504-8877";
@@ -106,6 +114,53 @@ const featuredProjects = [
   },
 ];
 
+const mobileShowcaseCards = [
+  {
+    id: "mobile-services",
+    eyebrow: "SERVICES",
+    title: "Websites, landing pages, and AI tools that look sharp.",
+    description:
+      "Swipe through the core pages of JaverTech in one row, with clear offers and faster paths into a real project.",
+    bullets: ["Custom Websites", "Landing Pages", "AI Chatbots"],
+    ctaLabel: "Start at $99",
+    href: contactMailtoUrl,
+    variant: "dark",
+  },
+  {
+    id: "mobile-approach",
+    eyebrow: "APPROACH",
+    title: "Fast turnaround. Clear communication. Design with purpose.",
+    description:
+      "The goal is simple: make your business look more legit online and turn more visitors into messages, calls, and leads.",
+    bullets: ["Fast Turnaround", "Clear Communication", "Design With Purpose"],
+    ctaLabel: "Talk With JaverTech",
+    href: contactMailtoUrl,
+    variant: "outline",
+  },
+  {
+    id: "mobile-pricing",
+    eyebrow: "PRICING",
+    title: "Professional websites starting at $99.",
+    description:
+      "Smaller projects start at $99, giving businesses a lower-cost way to launch something modern without big-agency pricing.",
+    bullets: ["Starting at $99", "Scope-based pricing", "Built for conversions"],
+    ctaLabel: "Start Your Project",
+    href: contactMailtoUrl,
+    variant: "dark",
+  },
+  {
+    id: "mobile-faq",
+    eyebrow: "FAQ",
+    title: "The biggest questions, answered fast.",
+    description:
+      "Most standard websites take one to two weeks, and ongoing support is available when you need updates or refinements.",
+    bullets: ["How much does it cost?", "How long does it take?", "What do I need to start?"],
+    ctaLabel: "Email JaverTech",
+    href: contactMailtoUrl,
+    variant: "outline",
+  },
+];
+
 export default function Home() {
   return (
     <main className="page-shell">
@@ -139,7 +194,7 @@ export default function Home() {
 
           <a className="button button--dark" href={contactMailtoUrl}>Start at $99</a>
 
-          <MobileMenu items={navItems} />
+          <MobileMenu items={mobileNavItems} />
         </div>
 
         <div className="hero__content">
@@ -156,11 +211,98 @@ export default function Home() {
             </p>
             <div className="statement__actions">
               <a className="button button--dark" href={contactMailtoUrl}>Start at $99</a>
-              <a className="button button--outline" href="#portfolio">See Our Work</a>
+              <a className="button button--outline button--desktop-only" href="#portfolio">
+                See Our Work
+              </a>
+              <a className="button button--outline button--mobile-only" href="#mobile-portfolio">
+                See Our Work
+              </a>
             </div>
           </div>
         </div>
       </section>
+
+      <div className="mobile-home">
+        <section className="mobile-row mobile-row--main" aria-labelledby="mobile-main-title">
+          <div className="mobile-row__intro">
+            <span className="section__eyebrow">MAIN PAGES</span>
+            <h2 id="mobile-main-title">Swipe Through the Main Site.</h2>
+            <p>
+              Scroll down for rows, then swipe across each row the way Apple handles cards on
+              mobile.
+            </p>
+          </div>
+
+          <div className="mobile-row__rail" aria-label="Main site cards">
+            {mobileShowcaseCards.map((card) => (
+              <article key={card.id} id={card.id} className="mobile-showcase-card">
+                <div className="mobile-showcase-card__body">
+                  <span className="mobile-showcase-card__eyebrow">{card.eyebrow}</span>
+                  <h3>{card.title}</h3>
+                  <p>{card.description}</p>
+                  <ul className="mobile-showcase-card__list">
+                    {card.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <a
+                  className={`button ${
+                    card.variant === "dark" ? "button--dark" : "button--outline"
+                  }`}
+                  href={card.href}
+                >
+                  {card.ctaLabel}
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="mobile-row mobile-row--work" id="mobile-portfolio">
+          <div className="mobile-row__intro">
+            <span className="section__eyebrow">FEATURED WORK</span>
+            <h2>Swipe Through the Projects.</h2>
+            <p>
+              Keep the work in its own row so people can move through your portfolio without
+              losing the rest of the site.
+            </p>
+          </div>
+
+          <div className="featured-work-rail" aria-label="Featured projects">
+            {featuredProjects.map((project) => (
+              <article
+                key={project.name}
+                className="feature-panel feature-panel--project featured-work-card"
+              >
+                <div className="feature-panel__logo" aria-hidden="true">
+                  {project.logo}
+                </div>
+                <div className="feature-panel__copy">
+                  <span className="feature-panel__eyebrow">{project.eyebrow}</span>
+                  <h3 className="feature-panel__title">
+                    {project.titleLines.map((line) => (
+                      <span key={line} className="feature-panel__title-line">
+                        {line}
+                      </span>
+                    ))}
+                  </h3>
+                  <p>{project.description}</p>
+                  <a
+                    className="button button--light"
+                    href={project.href}
+                    target={project.newTab ? "_blank" : undefined}
+                    rel={project.newTab ? "noopener noreferrer" : undefined}
+                  >
+                    {project.ctaLabel}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
 
       <section className="section section--light" id="services">
         <div className="section__intro">
