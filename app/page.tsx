@@ -135,6 +135,24 @@ export default function Home() {
           </nav>
 
           <a className="button button--dark" href={contactMailtoUrl}>Start at $99</a>
+
+          <details className="mobile-menu">
+            <summary className="mobile-menu__toggle" aria-label="Open site menu">
+              <span />
+              <span />
+              <span />
+            </summary>
+
+            <div className="mobile-menu__panel">
+              <nav className="mobile-menu__nav" aria-label="Mobile">
+                {navItems.map((item) => (
+                  <a key={item.href} href={item.href} className="mobile-menu__link">
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          </details>
         </div>
 
         <div className="hero__content">
