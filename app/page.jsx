@@ -173,7 +173,11 @@ export default function Home() {
         <section className="mobile-main-row" aria-label="Main site cards">
           <HorizontalRail ariaLabel="Main site cards" className="mobile-main-rail">
             {mobileMainCards.map((card) => (
-              <article key={card.id} id={card.id} className="mobile-main-card">
+              <article
+                key={card.id}
+                id={card.id}
+                className={`mobile-main-card${card.items ? " mobile-main-card--scrollable" : ""}`}
+              >
                 <div>
                   <span className="mobile-main-card__eyebrow">{card.eyebrow}</span>
                   <h2>{card.title}</h2>
