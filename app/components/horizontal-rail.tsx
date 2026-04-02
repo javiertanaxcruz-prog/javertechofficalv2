@@ -38,6 +38,8 @@ export function HorizontalRail({ ariaLabel, children, className }: HorizontalRai
       return;
     }
 
+    railRef.current.setPointerCapture(event.pointerId);
+
     dragStateRef.current = {
       axis: null,
       pointerId: event.pointerId,
@@ -73,8 +75,14 @@ export function HorizontalRail({ ariaLabel, children, className }: HorizontalRai
   };
 
   const handlePointerEnd = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const rail = railRef.current;
+
     if (dragStateRef.current.pointerId !== event.pointerId) {
       return;
+    }
+
+    if (rail?.hasPointerCapture(event.pointerId)) {
+      rail.releasePointerCapture(event.pointerId);
     }
 
     resetDragState();

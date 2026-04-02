@@ -243,11 +243,6 @@ export default function Home() {
                   <span className="mobile-main-card__eyebrow">{card.eyebrow}</span>
                   <h2>{card.title}</h2>
                   <p>{card.description}</p>
-                  <ul className="mobile-main-card__list">
-                    {card.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
                 </div>
 
                 <a
@@ -265,9 +260,7 @@ export default function Home() {
 
         <section className="mobile-work-spot" id="mobile-portfolio">
           <div className="mobile-work-spot__intro">
-            <span className="section__eyebrow">FEATURED WORK</span>
-            <h2>Swipe Through the Work.</h2>
-            <p>Projects get their own row so people can move through your creations seamlessly.</p>
+            <h2>Featured Work.</h2>
           </div>
 
           <HorizontalRail
