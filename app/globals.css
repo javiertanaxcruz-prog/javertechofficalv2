@@ -330,6 +330,15 @@ body.mobile-menu-open {
   display: none;
 }
 
+.mobile-home,
+.mobile-home > *,
+.mobile-main-row,
+.mobile-work-spot,
+.mobile-contact-card {
+  inline-size: 100%;
+  min-width: 0;
+}
+
 .button--mobile-only {
   display: none;
 }
@@ -339,6 +348,8 @@ body.mobile-menu-open {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: clamp(280px, 78vw, 320px);
+  inline-size: 100%;
+  max-inline-size: 100%;
   align-items: stretch;
   gap: 18px;
   overflow-x: scroll;
@@ -1104,6 +1115,7 @@ body.mobile-menu-open {
 
   .mobile-home {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 14px;
   }
 
