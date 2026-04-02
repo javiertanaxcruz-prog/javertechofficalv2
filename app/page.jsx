@@ -8,7 +8,6 @@ const navItems = [
   { label: "Work", href: "#portfolio" },
   { label: "Approach", href: "#why-javertech" },
   { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
 ];
 
 const mobileNavItems = [
@@ -16,7 +15,6 @@ const mobileNavItems = [
   { label: "Work", href: "#mobile-portfolio" },
   { label: "Approach", href: "#mobile-approach" },
   { label: "Pricing", href: "#mobile-pricing" },
-  { label: "FAQ", href: "#mobile-faq" },
 ];
 
 const genZWaitlistHref = "/go/gen-z";
@@ -72,32 +70,6 @@ const advantages = [
     title: "Design With Purpose",
     description:
       "Every page is shaped to build trust fast, explain the offer clearly, and push more people to reach out.",
-  },
-];
-
-const faqs = [
-  {
-    question: "How much does a project cost?",
-    answer:
-      "Smaller projects start at $99. Final pricing depends on scope, timeline, and the features needed for the build.",
-  },
-  {
-    question: "How long does a project take?",
-    answer:
-      "Most standard websites take one to two weeks. Larger builds or more custom functionality can take longer, depending on scope.",
-  },
-  {
-    question: "What do I need to get started?",
-    answer: "A clear goal, basic direction, and any copy, references, or assets already available.",
-  },
-  {
-    question: "Do you offer ongoing support?",
-    answer: "Yes. Ongoing support can cover updates, refinements, and new pages as needs evolve.",
-  },
-  {
-    question: "What makes JaverTech different from other agencies?",
-    answer:
-      "JaverTech focuses on clean execution, modern presentation, and a straightforward process.",
   },
 ];
 
@@ -164,17 +136,6 @@ const mobileMainCards = [
     ctaLabel: "Start Your Project",
     href: contactMailtoUrl,
     variant: "dark",
-  },
-  {
-    id: "mobile-faq",
-    eyebrow: "FAQ",
-    title: "The fast answers people want before reaching out.",
-    description:
-      "Most standard sites take one to two weeks, and support is available when you need updates, refinements, or new pages.",
-    bullets: ["How much does it cost?", "How long does it take?", "What do I need to start?"],
-    ctaLabel: "Email JaverTech",
-    href: contactMailtoUrl,
-    variant: "outline",
   },
 ];
 
@@ -420,22 +381,6 @@ export default function Home() {
             </p>
           </div>
           <a className="button button--light" href={contactMailtoUrl}>Start Your Project</a>
-        </div>
-      </section>
-
-      <section className="section section--light" id="faq">
-        <div className="section__intro">
-          <span className="section__eyebrow">FAQ</span>
-          <h2>Common Questions.</h2>
-        </div>
-
-        <div className="faq-list">
-          {faqs.map((item, index) => (
-            <details key={item.question} className="faq-item" open={index === 0}>
-              <summary>{item.question}</summary>
-              <p>{item.answer}</p>
-            </details>
-          ))}
         </div>
       </section>
 
