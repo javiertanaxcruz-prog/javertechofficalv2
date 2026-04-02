@@ -157,9 +157,9 @@ const mobileMainCards = [
   {
     id: "mobile-pricing",
     eyebrow: "PRICING",
-    title: "Professional websites starting at $99.",
+    title: "All services start at $99.",
     description:
-      "Smaller projects start at $99, giving businesses a lower-cost way to launch something strong without big-agency pricing.",
+      "All services start at $99, with final pricing depending on scope, turnaround, and the features needed for the build.",
     bullets: ["Starting at $99", "Scope-based pricing", "Built for conversions"],
     ctaLabel: "Start Your Project",
     href: contactMailtoUrl,
@@ -413,14 +413,10 @@ export default function Home() {
       <section className="section section--light" id="pricing">
         <div className="pricing-card pricing-card--bright">
           <div>
-            <h2>
-              Professional Websites
-              <br />
-              Starting at $99
-            </h2>
+            <h2>All Services Start at $99</h2>
             <p>
-              If you need something sharp, modern, and affordable, smaller projects start at $99.
-              Final pricing depends on scope, turnaround, and the functionality you need.
+              All services start at $99. Final pricing depends on scope, turnaround, and the
+              functionality you need.
             </p>
           </div>
           <a className="button button--light" href={contactMailtoUrl}>Start Your Project</a>
