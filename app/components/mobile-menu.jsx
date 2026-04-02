@@ -3,16 +3,7 @@
 import { useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
 
-type MobileMenuItem = {
-  label: string;
-  href: string;
-};
-
-type MobileMenuProps = {
-  items: MobileMenuItem[];
-};
-
-export function MobileMenu({ items }: MobileMenuProps) {
+export function MobileMenu({ items }) {
   const [isOpen, setIsOpen] = useState(false);
   const titleId = useId();
 
@@ -21,7 +12,7 @@ export function MobileMenu({ items }: MobileMenuProps) {
       return;
     }
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         setIsOpen(false);
       }

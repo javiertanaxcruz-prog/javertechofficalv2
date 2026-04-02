@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -8,7 +7,7 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "JaverTech | Modern Websites, Landing Pages, and AI Tools",
   description:
     "Clean, high-impact digital experiences for brands and businesses that want a stronger presence online.",
@@ -18,11 +17,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={manrope.variable}>
