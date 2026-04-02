@@ -52,25 +52,11 @@ const services = [
   },
 ];
 
-const advantages = [
-  {
-    title: "Fast Turnaround",
-    description: "Projects move quickly so you can get something strong online without dragging the process out.",
-  },
-  {
-    title: "Clear Communication",
-    description: "Everything stays simple, direct, and easy to follow from the first message to launch day.",
-  },
-  {
-    title: "Affordable Starting Point",
-    description:
-      "Smaller projects start at $99, giving businesses a lower-cost way to get online without paying agency prices first.",
-  },
-  {
-    title: "Design With Purpose",
-    description:
-      "Every page is shaped to build trust fast, explain the offer clearly, and push more people to reach out.",
-  },
+const approachSteps = [
+  "We talk about what you are looking for and how you want it done.",
+  "We build the product.",
+  "We review the build together so you can change anything you want.",
+  "We launch a strong product designed to help you make more money.",
 ];
 
 const featuredProjects = [
@@ -118,10 +104,8 @@ const mobileMainCards = [
   {
     id: "mobile-approach",
     eyebrow: "APPROACH",
-    title: "Fast turnaround. Clear communication. Clean execution.",
-    description:
-      "Everything is built to look sharp, move quickly, and make the process easy to follow from the first message to launch day.",
-    bullets: ["Fast Turnaround", "Clear Communication", "Design With Purpose"],
+    title: "A simple process from idea to launch.",
+    steps: approachSteps,
     ctaLabel: "Talk With JaverTech",
     href: contactMailtoUrl,
     variant: "outline",
@@ -208,7 +192,14 @@ export default function Home() {
                 <div>
                   <span className="mobile-main-card__eyebrow">{card.eyebrow}</span>
                   <h2>{card.title}</h2>
-                  <p>{card.description}</p>
+                  {card.description ? <p>{card.description}</p> : null}
+                  {card.steps ? (
+                    <ol className="mobile-main-card__steps">
+                      {card.steps.map((step) => (
+                        <li key={step}>{step}</li>
+                      ))}
+                    </ol>
+                  ) : null}
                 </div>
 
                 <a
@@ -358,14 +349,14 @@ export default function Home() {
       <section className="section section--light section--professional" id="why-javertech">
         <div className="section__intro">
           <span className="section__eyebrow">APPROACH</span>
-          <h2>Why Businesses Choose JaverTech.</h2>
+          <h2>A Simple 4-Step Process.</h2>
         </div>
 
         <div className="advantages-grid">
-          {advantages.map((item) => (
-            <article key={item.title} className="advantage">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+          {approachSteps.map((step, index) => (
+            <article key={step} className="advantage">
+              <h3>Step {index + 1}</h3>
+              <p>{step}</p>
             </article>
           ))}
         </div>
