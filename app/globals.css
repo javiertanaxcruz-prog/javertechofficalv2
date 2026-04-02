@@ -336,18 +336,21 @@ body.mobile-menu-open {
 
 .mobile-main-rail,
 .mobile-featured-work-rail {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(280px, 78vw, 320px);
+  align-items: stretch;
   gap: 18px;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
   padding-bottom: 4px;
   scroll-snap-type: x proximity;
+  scroll-padding-inline: 0;
   overscroll-behavior-x: contain;
   overscroll-behavior-inline: contain;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-y pinch-zoom;
-  user-select: none;
+  touch-action: pan-x pinch-zoom;
 }
 
 .mobile-main-rail::-webkit-scrollbar,
@@ -358,7 +361,7 @@ body.mobile-menu-open {
 
 .mobile-main-card,
 .featured-work-card {
-  flex: 0 0 320px;
+  inline-size: 100%;
   aspect-ratio: 1 / 1;
   min-height: 320px;
   display: flex;
@@ -370,7 +373,6 @@ body.mobile-menu-open {
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 18px 44px rgba(20, 32, 51, 0.08);
   scroll-snap-align: start;
-  scroll-snap-stop: always;
   overflow: hidden;
 }
 
@@ -1125,14 +1127,14 @@ body.mobile-menu-open {
   .mobile-main-rail,
   .mobile-featured-work-rail {
     gap: 14px;
-    padding: 2px 2px 8px;
+    grid-auto-columns: clamp(268px, 82vw, 308px);
+    padding: 2px 18px 8px 2px;
   }
 
   .mobile-main-card,
   .featured-work-card {
-    flex-basis: 84vw;
+    min-height: clamp(268px, 82vw, 308px);
     padding: 20px;
-    min-height: 320px;
     border-radius: 24px;
   }
 
