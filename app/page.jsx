@@ -29,28 +29,28 @@ const contactMailtoUrl = `mailto:${contactEmail}?subject=${encodeURIComponent(
 
 const services = [
   {
-    title: "Custom Websites",
+    title: "Website Creation",
     description:
-      "Clean, modern websites built to make businesses look more credible and turn more visitors into real inquiries.",
-    bullets: ["Mobile-ready design", "Fast performance", "Affordable starting options"],
+      "Custom websites built to help businesses look more professional online and turn more visitors into real leads.",
+    bullets: ["Modern layouts", "Mobile-ready design", "Fast setup"],
   },
   {
-    title: "AI Chatbots",
+    title: "Website Services",
     description:
-      "Smart website chat tools that answer questions, guide visitors, and help capture leads even when you are busy.",
-    bullets: ["Automated replies", "Lead capture", "Easy customer support"],
+      "Ongoing website help for updates, improvements, and keeping your online presence looking clean and current.",
+    bullets: ["Site updates", "Page improvements", "Ongoing support"],
   },
   {
-    title: "Landing Pages",
+    title: "Online Graphic Design",
     description:
-      "Sales-focused pages for launches, offers, and promotions built to keep attention and drive action.",
-    bullets: ["Clear messaging", "Quick turnaround", "Built for conversions"],
+      "Clean visual design for online use so your business looks sharper across pages, promotions, and digital content.",
+    bullets: ["Promo graphics", "Brand visuals", "Clean presentation"],
   },
   {
-    title: "Waitlist Pages",
+    title: "AI Chat Bot Creation",
     description:
-      "Pre-launch pages made to build hype, collect emails, and prove demand before a bigger launch.",
-    bullets: ["Email capture", "Launch-focused design", "Simple integrations"],
+      "AI chat bots that answer questions, guide visitors, and help capture leads even when you are not available.",
+    bullets: ["Automated replies", "Lead capture", "Customer guidance"],
   },
 ];
 
@@ -132,8 +132,13 @@ const mobileMainCards = [
     eyebrow: "SERVICES",
     title: "Services built to bring in more business.",
     description:
-      "Clean digital products made to build trust fast and turn more visitors into messages, calls, and real leads.",
-    bullets: ["Custom Websites", "AI Chatbots", "Landing Pages"],
+      "Website creation, website services, online graphic design, and AI chat bot creation for businesses that want to look stronger online.",
+    bullets: [
+      "Website Creation",
+      "Website Services",
+      "Online Graphic Design",
+      "AI Chat Bot Creation",
+    ],
     ctaLabel: "Start a Project",
     href: contactMailtoUrl,
     variant: "outline",
