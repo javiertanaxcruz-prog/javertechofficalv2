@@ -106,8 +106,6 @@ const mobileMainCards = [
     eyebrow: "APPROACH",
     title: "A simple process from idea to launch.",
     steps: approachSteps,
-    ctaLabel: "Talk With JaverTech",
-    href: contactMailtoUrl,
     variant: "outline",
   },
   {
@@ -202,14 +200,16 @@ export default function Home() {
                   ) : null}
                 </div>
 
-                <a
-                  className={`button ${
-                    card.variant === "dark" ? "button--dark" : "button--outline"
-                  }`}
-                  href={card.href}
-                >
-                  {card.ctaLabel}
-                </a>
+                {card.ctaLabel && card.href ? (
+                  <a
+                    className={`button ${
+                      card.variant === "dark" ? "button--dark" : "button--outline"
+                    }`}
+                    href={card.href}
+                  >
+                    {card.ctaLabel}
+                  </a>
+                ) : null}
               </article>
             ))}
           </HorizontalRail>
