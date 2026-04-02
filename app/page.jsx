@@ -29,26 +29,22 @@ const services = [
   {
     title: "Website Creation",
     description:
-      "Custom websites built to help businesses look more professional online and turn more visitors into real leads.",
-    bullets: ["Modern layouts", "Mobile-ready design", "Fast setup"],
+      "Custom websites built to help your business look professional and bring in more leads.",
   },
   {
     title: "Website Services",
     description:
-      "Ongoing website help for updates, improvements, and keeping your online presence looking clean and current.",
-    bullets: ["Site updates", "Page improvements", "Ongoing support"],
+      "Ongoing support for updates, improvements, and keeping your site clean and current.",
   },
   {
     title: "Online Graphic Design",
     description:
-      "Clean visual design for online use so your business looks sharper across pages, promotions, and digital content.",
-    bullets: ["Promo graphics", "Brand visuals", "Clean presentation"],
+      "Digital graphics for promotions, branding, and online content that looks polished.",
   },
   {
     title: "AI Chat Bot Creation",
     description:
-      "AI chat bots that answer questions, guide visitors, and help capture leads even when you are not available.",
-    bullets: ["Automated replies", "Lead capture", "Customer guidance"],
+      "AI chat bots that answer questions, guide visitors, and help capture more leads.",
   },
 ];
 
@@ -89,16 +85,7 @@ const mobileMainCards = [
     id: "mobile-services",
     eyebrow: "SERVICES",
     title: "Services built to bring in more business.",
-    description:
-      "Website creation, website services, online graphic design, and AI chat bot creation for businesses that want to look stronger online.",
-    bullets: [
-      "Website Creation",
-      "Website Services",
-      "Online Graphic Design",
-      "AI Chat Bot Creation",
-    ],
-    ctaLabel: "Start a Project",
-    href: contactMailtoUrl,
+    items: services,
     variant: "outline",
   },
   {
@@ -198,6 +185,15 @@ export default function Home() {
                       ))}
                     </ol>
                   ) : null}
+                  {card.items ? (
+                    <ol className="mobile-main-card__steps">
+                      {card.items.map((item) => (
+                        <li key={item.title}>
+                          <strong>{item.title}.</strong> {item.description}
+                        </li>
+                      ))}
+                    </ol>
+                  ) : null}
                 </div>
 
                 {card.ctaLabel && card.href ? (
@@ -288,19 +284,17 @@ export default function Home() {
           <h2>Services Built to Bring In More Business.</h2>
         </div>
 
-        <div className="services-grid">
-          {services.map((service) => (
-            <article key={service.title} className="card">
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <ul>
-                {service.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-            </article>
+        <ol className="services-list">
+          {services.map((service, index) => (
+            <li key={service.title} className="service-item">
+              <span className="service-item__number">{index + 1}</span>
+              <div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
 
       <section className="section section--light section--professional" id="portfolio">
