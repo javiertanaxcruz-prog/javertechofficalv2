@@ -161,9 +161,6 @@ export default function Home() {
               <a className="button button--outline button--desktop-only" href="#portfolio">
                 See Our Work
               </a>
-              <a className="button button--outline button--mobile-only" href="#mobile-portfolio">
-                See Our Work
-              </a>
             </div>
           </div>
         </div>
