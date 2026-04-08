@@ -902,6 +902,51 @@ body.mobile-menu-open {
   color: #111317;
 }
 
+.feature-panel--beauty {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.92), transparent 24%),
+    radial-gradient(circle at 85% 18%, rgba(208, 246, 255, 0.55), transparent 20%),
+    radial-gradient(circle at 12% 76%, rgba(255, 192, 226, 0.5), transparent 24%),
+    linear-gradient(135deg, #ffd9f3 0%, #ffaddb 46%, #ffd0ef 100%);
+  border-color: rgba(255, 88, 163, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 24px 54px rgba(200, 72, 136, 0.16);
+}
+
+.feature-panel--beauty .feature-panel__eyebrow {
+  color: #b42d70;
+}
+
+.feature-panel--beauty .feature-panel__title {
+  color: #84174f;
+}
+
+.feature-panel--beauty .feature-panel__title-line {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.feature-panel--beauty .feature-panel__title-line:last-child {
+  color: #ff2f98;
+}
+
+.feature-panel--beauty .feature-panel__copy p {
+  color: rgba(122, 20, 80, 0.82);
+}
+
+.feature-panel--beauty .feature-panel__logo {
+  color: rgba(255, 47, 152, 0.16);
+  text-shadow: none;
+}
+
+.feature-panel--beauty .button--light {
+  background: linear-gradient(135deg, #ff61a9, #ff8ac6 48%, #ffb7da);
+  color: #fffdfd;
+}
+
 .section--obsidian .advantage {
   border-top-color: rgba(255, 255, 255, 0.08);
 }

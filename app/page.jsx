@@ -71,12 +71,13 @@ const featuredProjects = [
   {
     name: "Hannah Forrester Hair",
     eyebrow: "FEATURED PROJECT",
-    titleLines: ["HANNAH", "HAIR"],
+    titleLines: ["Hannah", "Hair"],
     description:
       "A polished hair brand site built to showcase services clearly and give the business a stronger online presence.",
     ctaLabel: "View Site",
     href: hannahForresterHairHref,
-    logo: "H",
+    logo: "♡",
+    theme: "beauty",
     newTab: true,
   },
 ];
@@ -236,7 +237,9 @@ export default function Home() {
             {featuredProjects.map((project) => (
               <article
                 key={project.name}
-                className="feature-panel feature-panel--project featured-work-card"
+                className={`feature-panel feature-panel--project featured-work-card${
+                  project.theme ? ` feature-panel--${project.theme}` : ""
+                }`}
               >
                 <div className="feature-panel__logo" aria-hidden="true">
                   {project.logo}
@@ -324,7 +327,9 @@ export default function Home() {
           {featuredProjects.map((project) => (
             <article
               key={project.name}
-              className="feature-panel feature-panel--project featured-work-card"
+              className={`feature-panel feature-panel--project featured-work-card${
+                project.theme ? ` feature-panel--${project.theme}` : ""
+              }`}
             >
               <div className="feature-panel__logo" aria-hidden="true">
                 {project.logo}
