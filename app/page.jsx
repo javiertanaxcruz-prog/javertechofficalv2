@@ -71,7 +71,7 @@ const featuredProjects = [
   {
     name: "Hannah Forrester Hair",
     eyebrow: "FEATURED PROJECT",
-    titleLines: ["Hair by", "Hand ♡"],
+    titleLines: ["Hair by Hand,", "with heart"],
     description:
       "A polished hair brand site built to showcase services clearly and give the business a stronger online presence.",
     ctaLabel: "View Site",
