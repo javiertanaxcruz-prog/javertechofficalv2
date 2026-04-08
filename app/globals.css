@@ -11,7 +11,7 @@
   --pro-bg-soft: #eef3fb;
   --pro-bg-muted: #f3f7fd;
   --pro-accent-rgb: 19, 45, 99;
-  --pro-text: #132d63;
+  --pro-text: #102756;
   --pro-muted: rgba(var(--pro-accent-rgb), 0.72);
   --pro-border: rgba(var(--pro-accent-rgb), 0.08);
   --pro-accent: #132d63;
@@ -476,7 +476,7 @@ body.mobile-menu-open {
 .mobile-contact-card__brand .brand-logo__name,
 .mobile-contact-card__brand .brand-logo__tag,
 .mobile-contact-card h2 {
-  color: var(--pro-accent);
+  color: var(--pro-text);
 }
 
 .mobile-contact-card__owner {
