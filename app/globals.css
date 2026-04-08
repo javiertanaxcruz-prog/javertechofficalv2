@@ -859,17 +859,20 @@ body.mobile-menu-open {
 
 .featured-work-rail {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
+  justify-content: start;
   gap: 24px;
 }
 
 .featured-work-card {
+  aspect-ratio: 1 / 1;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
 
 .feature-panel--project {
-  min-height: 560px;
+  min-height: 0;
+  padding: clamp(26px, 3vw, 38px);
   background:
     radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.08), transparent 18%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
@@ -884,6 +887,10 @@ body.mobile-menu-open {
 
 .feature-panel--project .feature-panel__title {
   color: #f7f3ed;
+}
+
+.feature-panel--project .feature-panel__title-line {
+  font-size: clamp(2.8rem, 5.6vw, 4.2rem);
 }
 
 .feature-panel--project .feature-panel__title-line:last-child {

@@ -18,6 +18,7 @@ const mobileNavItems = [
 ];
 
 const genZWaitlistHref = "/go/gen-z";
+const hannahForresterHairHref = "https://project-dhsrx.vercel.app/";
 const contactEmail = "javiertanaxcruz@gmail.com";
 const contactPhoneDisplay = "317-504-8877";
 const contactPhoneHref = "tel:3175048877";
@@ -65,6 +66,17 @@ const featuredProjects = [
     ctaLabel: "Join the Waitlist",
     href: genZWaitlistHref,
     logo: "Z",
+    newTab: true,
+  },
+  {
+    name: "Hannah Forrester Hair",
+    eyebrow: "FEATURED PROJECT",
+    titleLines: ["HANNAH", "HAIR"],
+    description:
+      "A polished hair brand site built to showcase services clearly and give the business a stronger online presence.",
+    ctaLabel: "View Site",
+    href: hannahForresterHairHref,
+    logo: "H",
     newTab: true,
   },
 ];
