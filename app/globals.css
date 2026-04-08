@@ -922,11 +922,17 @@ body.mobile-menu-open {
   color: #84174f;
 }
 
+.feature-panel--beauty .feature-panel__copy {
+  max-width: 100%;
+}
+
 .feature-panel--beauty .feature-panel__title-line {
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
   font-weight: 700;
   letter-spacing: -0.04em;
+  font-size: clamp(2.2rem, 4.4vw, 3.35rem);
+  line-height: 0.92;
 }
 
 .feature-panel--beauty .feature-panel__title-line:last-child {
@@ -934,17 +940,26 @@ body.mobile-menu-open {
 }
 
 .feature-panel--beauty .feature-panel__copy p {
+  margin-top: 12px;
   color: rgba(122, 20, 80, 0.82);
+  font-size: 0.95rem;
+  line-height: 1.48;
 }
 
 .feature-panel--beauty .feature-panel__logo {
   color: rgba(255, 47, 152, 0.16);
   text-shadow: none;
+  font-size: clamp(5rem, 14vw, 7.5rem);
+  top: auto;
+  right: 18px;
+  bottom: 18px;
+  transform: none;
 }
 
 .feature-panel--beauty .button--light {
   background: linear-gradient(135deg, #ff61a9, #ff8ac6 48%, #ffb7da);
   color: #fffdfd;
+  margin-top: 14px;
 }
 
 .section--obsidian .advantage {
