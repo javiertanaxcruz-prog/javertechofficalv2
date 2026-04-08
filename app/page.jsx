@@ -73,7 +73,7 @@ const featuredProjects = [
     eyebrow: "FEATURED PROJECT",
     titleLines: ["Hair by Hand,", "with heart"],
     description:
-      "A polished hair brand site built to showcase services clearly and give the business a stronger online presence.",
+      "A website created for Hannah Forrester, a hairstylist at Foils and Fern in Greenwood, Indiana.",
     ctaLabel: "View Site",
     href: hannahForresterHairHref,
     logo: "♡",
