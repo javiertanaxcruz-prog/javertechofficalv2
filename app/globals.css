@@ -902,6 +902,7 @@ body.mobile-menu-open {
 .feature-panel--project .button--light {
   background: #ffffff;
   color: #111317;
+  margin-top: 22px;
 }
 
 .feature-panel--beauty {

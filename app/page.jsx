@@ -421,7 +421,7 @@ export default function Home() {
             </span>
           </div>
           <p>Affordable builds. Clean design. Fast turnaround.</p>
-          <a href={contactMailtoUrl}>Start a Project</a>
+          <a href={contactMailtoUrl}>Contact Owner</a>
           <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
           <a href={contactPhoneHref}>{contactPhoneDisplay}</a>
         </aside>
